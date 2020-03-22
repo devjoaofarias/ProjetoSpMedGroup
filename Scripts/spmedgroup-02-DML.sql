@@ -32,7 +32,7 @@ VALUES (3, 'Roberto Possarle', 'roberto.possarle@spmedicalgroup.com.br', '321321
 (1, 'Saulo', 'saulo@gmail.com', '767676', '11 7676-676', '736432784', '32356236267', 'Rua Estado de Israel 1700, São Paulo, Estado de São Paulo, 04022-000')
 
 INSERT INTO Administrador (IdClinica, IdUsuario)
-VALUES (2, 37),(2, 38);
+VALUES (1, 11),(1, 12);
 
 INSERT INTO Especialidade (Titulo)
 VALUES ('Acupuntura'),
@@ -54,13 +54,13 @@ VALUES ('Acupuntura'),
 ('Psiquiatria');
 
 INSERT INTO Medico (IdEspecialidade, IdClinica, IdUsuario, Crm)
-VALUES (2, 2, 2, '54256-SP'), (16, 2, 28, '54452-SP'), (17, 2, 29, '65463-SP');
+VALUES (2, 1, 1, '54256-SP'), (16, 1, 2, '54452-SP'), (17, 1, 3, '65463-SP');
 
 INSERT INTO Prontuario (IdUsuario, IdClinica, Altura, Peso, DataNascimento)
-VALUES (30, 2, '1,60', '54', '13/10/1983'), (31, 2, '1,80', '75', '23/07/2001'), (32, 2, '1,87', '65', '10/10/1978'), (33, 2, '1,92', '103', '13/10/1985'), (34, 2, '1,43', '58', '27/08/1975'), (35, 2, '1,50', '50', '21/03/1972'), (36, 2, '1,22', '39', '05/03/2018');
+VALUES (3, 1, '1,60', '54', '13/10/1983'), (4, 1, '1,80', '75', '23/07/2001'), (5, 1, '1,87', '65', '10/10/1978'), (6, 1, '1,92', '103', '13/10/1985'), (7, 1, '1,43', '58', '27/08/1975'), (8, 1, '1,50', '50', '21/03/1972'), (9, 1, '1,22', '39', '05/03/2018');
 
 INSERT INTO Consulta (IdProntuario, IdMedico, DataConsulta, Descricao, Situacao)
 VALUES (7, 3, '20/01/2020 15:00', 'Ressonancia', 'Realizada')
 
 INSERT INTO Consulta (IdProntuario, IdMedico, DataConsulta, Descricao, Situacao)
-VALUES (2, 2, '06/01/2020 10:00', 'Exame de Rotina', 'Cancelada'), (3, 2, '07/02/2020 11:00', 'Ressonancia', 'Realizada'), (2, 2, '06/02/2018 10:00', 'Ressonancia', 'Realizada'), (4, 1, '07/02/2019 11:00', 'Ressonancia', 'Cancelada'), (7, 3, '08/03/2020 15:00', 'Ressonancia', 'Agendada') , (4, 1, '09/03/2020', 'Exame de Rotina', 'Agendada');
+VALUES (2, 4, '06/01/2020 10:00', 'Exame de Rotina', 'Cancelada'), (3, 4, '07/02/2020 11:00', 'Ressonancia', 'Realizada'), (6, 4, '06/02/2018 10:00', 'Ressonancia', 'Realizada'), (4, 3, '07/02/2019 11:00', 'Ressonancia', 'Cancelada'), (5, 5, '08/03/2020 15:00', 'Ressonancia', 'Agendada') , (8, 3, '09/03/2020', 'Exame de Rotina', 'Agendada');
