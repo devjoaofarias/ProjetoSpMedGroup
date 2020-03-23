@@ -29,14 +29,14 @@ namespace Senai.SpMedGroupWebApi.DataBase.first
                })
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SpMedGroup", Version = "v1" });
-                // Set the comments path for the Swagger JSON and UI.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+              //  c.SwaggerDoc("v1", new OpenApiInfo { Title = "SpMedGroup", Version = "v1" });
+                //// Set the comments path for the Swagger JSON and UI.
+                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //c.IncludeXmlComments(xmlPath);
+            //});
 
             services
 
@@ -84,13 +84,13 @@ namespace Senai.SpMedGroupWebApi.DataBase.first
 
             app.UseAuthentication();
 
-            app.UseSwagger();
+            //app.UseSwagger();
 
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SpMedGroup V1");
-                c.RoutePrefix = string.Empty;
-            });
+            //app.UseSwaggerUI(c =>
+           // {
+           //     c.SwaggerEndpoint("/swagger/v1/swagger.json", "SpMedGroup V1");
+            //    c.RoutePrefix = string.Empty;
+           // });
 
             app.UseMvc();
 
