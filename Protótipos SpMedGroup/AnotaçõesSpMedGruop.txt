@@ -1,0 +1,23 @@
+Criação dos layouts de baixa fidelidade (wireframes) desktop do projeto SP Medical Group, sendo 5 telas obrigatórias:
+Login
+Gerenciamento de Usuários (Lista, Cadastro e Edição)
+Gerenciamento de Clínicas (Lista, Cadastro e Edição)
+Gerenciamento de Consultas (Lista, Cadastro e Edição)
+Minhas Consultas (Lista e se for médico, pode adicionar uma descrição na consulta)
+E 2 telas extras (opcionais):
+Home
+Sobre
+
+CORES:
+
+azul	        #83BEDF
+verde	        #81DF99
+cinza           #f6f6f6
+preto (títulos) #555555
+preto (textos)  #626262
+azul (tabelas)  #83BEDF/ #83BEDF 50% opacidade
+
+FONTES:   TITULO - HOMEWORK
+	  COMUM - ROBOTO
+							
+LOGO 1
