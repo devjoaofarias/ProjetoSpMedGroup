@@ -1,7 +1,7 @@
-CREATE DATABASE SpMedGroup_Tarde;
+CREATE DATABASE SpMedGroup_Joao;
 GO
 
-USE SpMedGroup_Tarde;
+USE SpMedGroup_Joao;
 GO
 
 CREATE TABLE Estado (
@@ -81,10 +81,11 @@ CREATE TABLE Situacao (
 
 CREATE TABLE Consulta (
 	IdConsulta				INT PRIMARY KEY IDENTITY,
+	IdClinica				INT FOREIGN KEY REFERENCES Clinica(IdClinica) NOT NULL,
 	IdProntuario			INT FOREIGN KEY REFERENCES Prontuario(IdProntuario) NOT NULL,
 	IdMedico				INT FOREIGN KEY REFERENCES Medico(IdMedico) NOT NULL,
 	IdSituacao				INT FOREIGN KEY REFERENCES Situacao(IdSituacao) NOT NULL,
-	DataConsulta			DATE NOT NULL,
+	DataConsulta			SMALLDATETIME NOT NULL,
 	Descricao				VARCHAR(100),
 );
 

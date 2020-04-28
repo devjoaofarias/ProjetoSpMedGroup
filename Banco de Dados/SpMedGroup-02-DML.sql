@@ -1,4 +1,4 @@
-USE SpMedGroup_Tarde;
+USE SpMedGroup_Joao;
 GO
 
 SELECT * FROM Usuario
@@ -75,9 +75,9 @@ VALUES (4, 1, '1,60', '54', '13/10/1983'), (5, 1, '1,80', '75', '23/07/2001'),
 (8, 1, '1,43', '58', '27/08/1975'), (9, 1, '1,50', '50', '21/03/1972'),
 (10, 1, '1,22', '39', '05/03/2018');
 
-INSERT INTO Consulta (IdProntuario, IdMedico, IdSituacao, DataConsulta, Descricao)
-VALUES (6, 1, 4, '20/01/2020 15:00', 'Ressonancia'),(1, 2, 3, '06/01/2020 10:00', 'Exame de Rotina'),
-(2, 2, 4, '07/02/2020 11:00', 'Ressonancia'),(5, 2, 4, '06/02/2018 10:00', 'Ressonancia'), 
-(3, 1, 3, '07/02/2019 11:00', 'Ressonancia'),(4, 3, 1, '08/03/2020 15:00', 'Ressonancia'),
-(7, 1, 1, '09/03/2020', 'Exame de Rotina');
+INSERT INTO Consulta (IdClinica, IdProntuario, IdMedico, IdSituacao, DataConsulta, Descricao)
+VALUES (1, 6, 1, 4, '20/01/2020 15:00', 'Ressonancia'),(1, 1, 2, 3, '06/01/2020 10:00', 'Exame de Rotina'),
+(1, 2, 2, 4, '07/02/2020 11:00', 'Ressonancia'),(1, 5, 2, 4, '06/02/2018 10:00', 'Ressonancia'), 
+(1, 3, 1, 3, '07/02/2019 11:00', 'Ressonancia'),(1, 4, 3, 1, '08/03/2020 15:00', 'Ressonancia'),
+(1, 7, 1, 1, '09/03/2020', 'Exame de Rotina');
 
