@@ -31,6 +31,14 @@ namespace SenaiSpMedGroup.WebApi
                 })
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
+            services.AddSwaggerGen(c =>
+                 {
+                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SpMedGroup", Version = "v1" });
+                     c.IncludeXmlComments(xmlPath);
+                 });
+
 
             services
 
@@ -75,6 +83,15 @@ namespace SenaiSpMedGroup.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SpMedGroup V1");
+                c.RoutePrefix = string.Empty;
+                
+            });
 
             app.UseAuthentication();
 

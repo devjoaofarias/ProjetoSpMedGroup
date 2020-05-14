@@ -12,76 +12,72 @@ namespace SenaiSpMedGroup.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AdministradorController : ControllerBase
+    public class UsuarioController : ControllerBase
     {
-        private IAdministradorRepository _administradorRepository;
+        private IUsuarioRepository _usuarioRepository;
 
-        public AdministradorController()
+        public UsuarioController()
         {
-            _administradorRepository = new AdministradorRepository();
+            _usuarioRepository = new UsuarioRepository();
         }
 
         /// <summary>
-        /// Lista todos os Administradores
+        /// Lista todos os Tipos de Usuario
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_administradorRepository.Listar());
+            return Ok(_usuarioRepository.Listar());
         }
 
         /// <summary>
-        /// Busca um Administrador através do seu ID
+        /// Busca um Usuário através do seu ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_administradorRepository.BuscarPorId(id));
+            return Ok(_usuarioRepository.BuscarPorId(id));
         }
 
         /// <summary>
-        /// Cadastra um novo Administrador
+        /// Cadastra um novo Usuário
         /// </summary>
-        /// <param name="novoAdministrador"></param>
+        /// <param name="novoUsuario"></param>
         /// <returns></returns>
-        
         [HttpPost]
-        public IActionResult Post(Administrador novoAdministrador)
+        public IActionResult Post(Usuario novoUsuario)
         {
-            _administradorRepository.Cadastrar(novoAdministrador);
+            _usuarioRepository.Cadastrar(novoUsuario);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Deleta um Administrador
+        /// Deleta um Usuário
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _administradorRepository.Deletar(id);
+            _usuarioRepository.Deletar(id);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Atualiza um Administrador existente
+        /// Atualizar um Usuário existente
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="administrador"></param>
+        /// <param name="usuario"></param>
         /// <returns></returns>
-        
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Administrador administrador)
+        public IActionResult Atualizar(int id, Usuario usuario)
         {
-            _administradorRepository.Atualizar(id, administrador);
+            _usuarioRepository.Atualizar(id, usuario);
             return StatusCode(200);
         }
 
     }
 }
-

@@ -12,76 +12,74 @@ namespace SenaiSpMedGroup.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AdministradorController : ControllerBase
+    public class EspecialidadeController : ControllerBase
     {
-        private IAdministradorRepository _administradorRepository;
+        private IEspecialidadeRepository _especialidadeRepository;
 
-        public AdministradorController()
+        public EspecialidadeController()
         {
-            _administradorRepository = new AdministradorRepository();
+            _especialidadeRepository = new EspecialidadeRepository();
         }
 
         /// <summary>
-        /// Lista todos os Administradores
+        /// Lista todas as Especialidades
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_administradorRepository.Listar());
+            return Ok(_especialidadeRepository.Listar());
         }
 
         /// <summary>
-        /// Busca um Administrador através do seu ID
+        /// Busca uma Especialidade através do seu ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_administradorRepository.BuscarPorId(id));
+            return Ok(_especialidadeRepository.BuscarPorId(id));
         }
 
         /// <summary>
-        /// Cadastra um novo Administrador
+        /// Cadastra uma nova Especialidade
         /// </summary>
-        /// <param name="novoAdministrador"></param>
+        /// <param name="novaEspecialidade"></param>
         /// <returns></returns>
-        
+
         [HttpPost]
-        public IActionResult Post(Administrador novoAdministrador)
+        public IActionResult Post(Especialidade novaEspecialidade)
         {
-            _administradorRepository.Cadastrar(novoAdministrador);
+            _especialidadeRepository.Cadastrar(novaEspecialidade);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Deleta um Administrador
+        /// Deleta uma especialidade
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _administradorRepository.Deletar(id);
+            _especialidadeRepository.Deletar(id);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Atualiza um Administrador existente
+        /// Atualiza uma especialidade existente
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="administrador"></param>
+        /// <param name="especialidade"></param>
         /// <returns></returns>
-        
+
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Administrador administrador)
+        public IActionResult Atualizar(int id, Especialidade especialidade)
         {
-            _administradorRepository.Atualizar(id, administrador);
+            _especialidadeRepository.Atualizar(id, especialidade);
             return StatusCode(200);
         }
-
     }
 }
-

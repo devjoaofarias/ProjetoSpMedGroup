@@ -14,3 +14,5 @@ C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.Web
 C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.WebApi\SenaiSpMedGroup.WebApi\obj\Debug\netcoreapp2.1\SenaiSpMedGroup.WebApi.csproj.CoreCompileInputs.cache
 C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.WebApi\SenaiSpMedGroup.WebApi\obj\Debug\netcoreapp2.1\SenaiSpMedGroup.WebApi.dll
 C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.WebApi\SenaiSpMedGroup.WebApi\obj\Debug\netcoreapp2.1\SenaiSpMedGroup.WebApi.pdb
+C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.WebApi\SenaiSpMedGroup.WebApi\bin\Debug\netcoreapp2.1\SenaiSpMedGroup.WebApi.xml
+C:\Users\joaos\OneDrive\Senai\SenaiSpMedGroup.WebApi\Backend\SenaiSpMedGroup.WebApi\SenaiSpMedGroup.WebApi\obj\Debug\netcoreapp2.1\SenaiSpMedGroup.WebApi.xml

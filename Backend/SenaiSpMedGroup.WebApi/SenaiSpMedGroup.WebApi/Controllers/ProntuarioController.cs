@@ -12,76 +12,74 @@ namespace SenaiSpMedGroup.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AdministradorController : ControllerBase
+    public class ProntuarioController :ControllerBase
     {
-        private IAdministradorRepository _administradorRepository;
+        private IProntuarioRepository _prontuarioRepository;
 
-        public AdministradorController()
+        public ProntuarioController()
         {
-            _administradorRepository = new AdministradorRepository();
+            _prontuarioRepository = new ProntuarioRepository();
         }
 
         /// <summary>
-        /// Lista todos os Administradores
+        /// Lista todas os Prontuarios
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_administradorRepository.Listar());
+            return Ok(_prontuarioRepository.Listar());
         }
 
         /// <summary>
-        /// Busca um Administrador através do seu ID
+        /// Busca um Prontuario através do seu ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_administradorRepository.BuscarPorId(id));
+            return Ok(_prontuarioRepository.BuscarPorId(id));
         }
 
         /// <summary>
-        /// Cadastra um novo Administrador
+        /// Cadastra um novo Prontuario
         /// </summary>
-        /// <param name="novoAdministrador"></param>
+        /// <param name="novoProntuario"></param>
         /// <returns></returns>
-        
+
         [HttpPost]
-        public IActionResult Post(Administrador novoAdministrador)
+        public IActionResult Post(Prontuario novoProntuario)
         {
-            _administradorRepository.Cadastrar(novoAdministrador);
+            _prontuarioRepository.Cadastrar(novoProntuario);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Deleta um Administrador
+        /// Deleta um Prontuario
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _administradorRepository.Deletar(id);
+            _prontuarioRepository.Deletar(id);
             return StatusCode(200);
         }
 
         /// <summary>
-        /// Atualiza um Administrador existente
+        /// Atualiza um prontuario existente
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="administrador"></param>
+        /// <param name="prontuario"></param>
         /// <returns></returns>
-        
+
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Administrador administrador)
+        public IActionResult Atualizar(int id, Prontuario prontuario)
         {
-            _administradorRepository.Atualizar(id, administrador);
+            _prontuarioRepository.Atualizar(id, prontuario);
             return StatusCode(200);
         }
-
     }
 }
-
